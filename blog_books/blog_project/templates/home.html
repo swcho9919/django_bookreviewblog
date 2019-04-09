@@ -20,6 +20,7 @@
             </th>
             {% for post in posts %}
             <tr>
+                <td></td>
                 <td><a href="{% url 'detail' post.pk %}">{{ post.title }}</a></td>
                 <td>{{ post.review }}</td>
                 <td>{{ post.price }}</td>
