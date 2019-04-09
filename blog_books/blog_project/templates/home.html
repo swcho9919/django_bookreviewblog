@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>끼리네 책방</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>끼리네 책방</h1>
+    <h2>리뷰 목록</h2>
+        <table>
+            <th>
+                <td>제목</td>
+                <td>리뷰</td>
+                <td>가격</td>
+                <td>점수</td>
+            </th>
+            {% for post in posts %}
+            <tr>
+                <td><a href="{% url 'detail' post.pk %}">{{ post.title }}</a></td>
+                <td>{{ post.review }}</td>
+                <td>{{ post.price }}</td>
+                <td>{{ post.score }}</td>
+            </tr>   
+            {% endfor %}
+        </table>
+    <a href="{% url 'new' %}">리뷰 쓰기</a>
+</body>
+</html>
