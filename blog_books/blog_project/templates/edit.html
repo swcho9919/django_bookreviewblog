@@ -14,21 +14,20 @@
 </head>
 
 
-{% block content %}
-<body>
+<body>  
     <!-- JS Query-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 <!-- Main Contents-->
-    <h2 class='detail_booktitle'>{{ post.title }}</h2>
-    <h5>책 리뷰 : {{ post.review }}</h5>
-    <h5>가격 : {{ post.price }}</h5>
-    <h5>점수(5점 만점) : {{ post.score }}</h5>
-    <a class='detail_home' href="{% url 'home' %}">글 목록으로 돌아가기</a>
-    <a class='detail_edit' href="{% url 'edit' post.pk %}">수정하기</a>
-    <a class='detail_delete' href="{% url 'delete' post.pk %}">빠이짜이찌엔</a>
-</body>
+
+{% block content %}
+    <h1>수정하기</h1>
+     <form method="POST">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">수정!</button>
+    </form> 
 {% endblock %}
+</body>
 </html>

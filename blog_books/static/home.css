@@ -1,0 +1,31 @@
+h1.header{
+    margin : 50px;
+    font-family: 'Bangers', serif;
+    font-size: 50px;
+}
+h2.review_list {
+    position: relative;
+    margin: 20px;
+    margin-top: 50px;
+    font-family: 'Bangers', serif;
+}
+table {
+    width: 40%;
+}
+.detail_home{
+    margin:100px 30px 10px 20px;
+}
+.detail_edit{
+    margin-right: 30px;
+}
+.write_review{
+    margin-top: 25px;
+}
+.detail_booktitle{
+    font-family: 'Bangers', serif;
+    margin-bottom: 30px;
+}
+.kirri{
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
